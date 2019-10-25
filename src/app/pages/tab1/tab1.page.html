@@ -1,0 +1,23 @@
+<ion-header no-border>
+    <ion-toolbar color="dark">
+        <ion-title>
+            Pendientes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+    <ion-list *ngFor="let item of lista" color="dark">
+        <ion-item detail color="dark">
+            <ion-label>{{ item.titulo }}</ion-label>
+        </ion-item>
+    </ion-list>
+
+    <!-- fab placed to the top end -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
