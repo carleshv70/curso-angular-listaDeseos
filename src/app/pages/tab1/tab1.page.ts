@@ -55,6 +55,10 @@ export class Tab1Page {
             console.log(data);
 
             // crear la lista
+            const listaId:number = this.deseosService.crearLista(data.titulo);
+
+            this.router.navigate(['/tabs/tab1/agregar', listaId]);
+
           }
         }
       ]
@@ -62,7 +66,13 @@ export class Tab1Page {
 
     alert.present();
 
-    //this.router.navigateByUrl('/tabs/tab1/agregar');
+
+  }
+
+
+  listaSeleccionada(lista: Lista){
+    console.log(lista.id);
+    this.router.navigate(['/tabs/tab1/agregar', lista.id]);
   }
 
 }

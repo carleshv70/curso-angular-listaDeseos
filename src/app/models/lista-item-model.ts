@@ -5,7 +5,7 @@ export class ListaItem {
 
     constructor(desc:string){
     
-        this.desc = this.desc;
+        this.desc = desc;
         this.completado = false;
     }
 }
