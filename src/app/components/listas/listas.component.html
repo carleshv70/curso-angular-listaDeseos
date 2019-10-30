@@ -1,3 +1,23 @@
-<p>
-  listas works!
-</p>
+<ion-item-sliding *ngFor="let lista of deseosService.listas | filtroCompletado:terminada" color="dark" class="animated fadeInDown">
+
+
+    <ion-list color="dark" (click)="listaSeleccionada( lista )">
+        <ion-item detail color="dark">
+            <ion-label>{{ lista.titulo }}</ion-label>
+            <ion-note slot="end" color="tertiary">{{ lista.items.length}} items</ion-note>
+        </ion-item>
+    </ion-list>
+
+    <ion-item-options side="start" color="dark">
+        <ion-item-option (click)="editarTitulo(lista)" color="primary">
+            <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+    </ion-item-options>
+
+    <ion-item-options side="end" color="dark">
+        <ion-item-option (click)="borrarLista(lista)" color="danger">
+            <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-item-option>
+    </ion-item-options>
+
+</ion-item-sliding>

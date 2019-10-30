@@ -70,9 +70,5 @@ export class Tab1Page {
   }
 
 
-  listaSeleccionada(lista: Lista){
-    console.log(lista.id);
-    this.router.navigate(['/tabs/tab1/agregar', lista.id]);
-  }
-
+  
 }
